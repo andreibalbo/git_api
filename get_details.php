@@ -184,7 +184,7 @@ $subscribers = $decoded["subscribers_count"];
         background-position-x: -150px;
         background-position-y: -90px;
 
-        background-image: url('/GITAPI/img/cc-wallpaper-desktop.png');
+        background-image: url('/img/cc-wallpaper-desktop.png');
         background-size: 1400px 800px;
         width: 1200px;
         height: 700px;

@@ -59,7 +59,7 @@ if(count($result)<1){
     <td class="tdlist"><?php echo $rows[$i][1];?></td>
     <td class="tdlist"><?php echo $rows[$i][2];?></td>
     <td class="tdlist"><?php echo $rows[$i][3];?></td>
-        <td class="tdlist" align="center"><a href="\get_details.php?id=<?php echo $rows[$i][0];?>"> <img src="/git_api/img/info.png" width="55px" height="55px"></a></td>
+        <td class="tdlist" align="center"><a href="\get_details.php?id=<?php echo $rows[$i][0];?>"> <img src="/img/info.png" width="55px" height="55px"></a></td>
     </tr>
         <?php }?>
 
