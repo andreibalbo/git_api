@@ -7,12 +7,14 @@
  */
 $herokudburl = 'mysql://be8f4106de0793:a892af13@us-cdbr-iron-east-05.cleardb.net/heroku_12321427b6678fd?reconnect=true';
 $url = parse_url(getenv($herokudburl));
-$server = $url["host"];
-$username = $url["user"];
-$password = $url["pass"];
-$db = substr($url["path"], 1);
 
-$db = new mysqli($server, $username, $password, $db);
+$server = 'us-cdbr-iron-east-05.cleardb.net';
+$username = 'be8f4106de0793:a892af13';
+$password = 'a892af13';
+$dbx = 'heroku_12321427b6678fd';
+
+$db = new mysqli($server, $username, $password, $dbx);
+
 
 
 $sql = 'select * from repositories order by stars desc';
