@@ -18,6 +18,9 @@ $db = new mysqli($server, $username, $password, $db);
 $sql = 'select * from repositories order by stars desc';
 $result = mysqli_query($db,$sql);
 
+if(count($result)<1){
+    die("Nao ha dados gravados no BD");
+}
 ?>
 <head>
     <title>App</title>
