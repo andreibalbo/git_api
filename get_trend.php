@@ -13,12 +13,13 @@ $url = parse_url(getenv($herokudburl));
 $server = $url["host"];
 $username = $url["user"];
 $password = $url["pass"];
-$db = substr($url["path"], 1);
+$dbx = substr($url["path"], 1);
 
-$db = new mysqli($server, $username, $password, $db);
+$db = new mysqli($server, $username, $password, $dbx);
 
 
 if ($db->connect_error) {
+    echo 'Server: '.$server.' / user: '.$username.' / pwd: '.$password.' / dbx: '.$dbx;
     die("Connection failed: " . $db->connect_error);
 }
 
