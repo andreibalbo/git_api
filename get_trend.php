@@ -18,6 +18,10 @@ $db = substr($url["path"], 1);
 $db = new mysqli($server, $username, $password, $db);
 
 
+if ($db->connect_error) {
+    die("Connection failed: " . $db->connect_error);
+}
+
 //apaga os trendings que estavam salvos, pra pegar os novos
 $sql = 'delete from repositories where 1';
 mysqli_query($db,$sql);
