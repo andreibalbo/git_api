@@ -54,7 +54,7 @@ $result = mysqli_query($db,$sql);
     <td class="tdlist"><?php echo $rows[$i][1];?></td>
     <td class="tdlist"><?php echo $rows[$i][2];?></td>
     <td class="tdlist"><?php echo $rows[$i][3];?></td>
-        <td class="tdlist" align="center"><a href="\git_api\get_details.php?id=<?php echo $rows[$i][0];?>"> <img src="/git_api/img/info.png" width="55px" height="55px"></a></td>
+        <td class="tdlist" align="center"><a href="\get_details.php?id=<?php echo $rows[$i][0];?>"> <img src="/git_api/img/info.png" width="55px" height="55px"></a></td>
     </tr>
         <?php }?>
 
@@ -108,7 +108,7 @@ $result = mysqli_query($db,$sql);
         background-position-x: -150px;
         background-position-y: -90px;
 
-        background-image: url('/git_api/img/cc-wallpaper-desktop.png');
+        background-image: url('/img/cc-wallpaper-desktop.png');
         background-size: 1400px 800px;
         width: 1200px;
     }

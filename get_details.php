@@ -114,13 +114,13 @@ $subscribers = $decoded["subscribers_count"];
         <p class="texto2" style="top: 65px;left: 680px;">Updated at: <?php echo $updated?></p>
         <p class="texto2" style="top: 90px;left: 680px;">Pushed at: <?php echo $pushed?></p>
 
-        <img src="/git_api/img/star-128.png" title="Stars count" style="position: absolute;top: 20px;left:300px; height: 50px;width: 50px;">
+        <img src="/img/star-128.png" title="Stars count" style="position: absolute;top: 20px;left:300px; height: 50px;width: 50px;">
         <p class="texto2" style="top: 50px;left: 310px;"><?php echo $stars?></p>
 
-        <img src="/git_api/img/bino.png" title="Watchers count" style="position: absolute;top: 20px;left:380px; height: 50px;width: 50px;">
+        <img src="/img/bino.png" title="Watchers count" style="position: absolute;top: 20px;left:380px; height: 50px;width: 50px;">
         <p class="texto2" style="top: 50px;left: 390px;"><?php echo $watchers?></p>
 
-        <img src="/git_api/img/subs.png" title="Subs count" style="position: absolute;top: 20px;left:460px; height: 50px;width: 50px;">
+        <img src="/img/subs.png" title="Subs count" style="position: absolute;top: 20px;left:460px; height: 50px;width: 50px;">
         <p class="texto2" style="top: 50px;left: 470px;"><?php echo $subscribers?></p>
 
         <p class="texto2" style="top: 160px;left: 20px;">Description: <?php echo $description?></p>

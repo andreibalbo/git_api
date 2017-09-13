@@ -66,7 +66,7 @@ for($i=0;$i<$num_rows;$i++){
 echo ' Dados salvos no BD! ';
 
 echo '<br><br>';
-echo '<a href="/git_api/init.php">Voltar</a>';
+echo '<a href="/init.php">Voltar</a>';
 
 //echo '<pre>';
 //echo var_dump($decoded["items"][0]["description"]);

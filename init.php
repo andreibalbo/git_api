@@ -23,12 +23,12 @@
 
 <div class="bodyback">
 
-    <a class="get" href="\git_api\get_trend.php">
-        <img border="0" title="Load/Reload trendings on DB" alt="Get trends" src="/git_api/img/button_get-trendings.png">
+    <a class="get" href="\get_trend.php">
+        <img border="0" title="Load/Reload trendings on DB" alt="Get trends" src="/img/button_get-trendings.png">
     </a>
 
-    <a class="list" href="\git_api\list_trend.php">
-        <img border="0" title="List of loaded repos" alt="List trends" src="/git_api/img/button_list-trendings.png">
+    <a class="list" href="\list_trend.php">
+        <img border="0" title="List of loaded repos" alt="List trends" src="/img/button_list-trendings.png">
     </a>
 
 </div>
@@ -90,7 +90,7 @@
         background-position-x: -150px;
         background-position-y: -90px;
 
-        background-image: url('/git_api/img/cc-wallpaper-desktop.png');
+        background-image: url('/img/cc-wallpaper-desktop.png');
         background-size: 600px 500px;
         height: 300px;
         width: 600px;
