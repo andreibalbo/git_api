@@ -5,12 +5,15 @@
  * Date: 8/8/2017
  * Time: 10:37 AM
  */
-$user = 'root';
-$pwd = '';
-$ndb = 'gitapi';
-$db = new mysqli('localhost',$user,$pwd,$ndb) or die("falha ao conectar ao db");
 
-if ($db->connect_error) {
-    die("Connection failed: " . $db->connect_error);
-}
-else{echo 'Conectado na base de dados!';}
+$herokudburl = 'mysql://be8f4106de0793:a892af13@us-cdbr-iron-east-05.cleardb.net/heroku_12321427b6678fd?reconnect=true';
+
+$url = parse_url(getenv("$herokudburl"));
+
+$server = $url["host"];
+$username = $url["user"];
+$password = $url["pass"];
+$db = substr($url["path"], 1);
+
+$db = new mysqli($server, $username, $password, $db);
+?>

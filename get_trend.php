@@ -5,16 +5,18 @@
  * Date: 9/11/2017
  * Time: 3:46 PM
  */
-$user = 'root';
-$pwd = '';
-$ndb = 'gitapi';
-$db = new mysqli('localhost',$user,$pwd,$ndb) or die("falha ao conectar ao db");
 
-if ($db->connect_error) {
-    die("Connection failed: " . $db->connect_error);
-}
-else{echo 'Conectado na base de dados!';}
-echo '<br>';
+
+$herokudburl = 'mysql://be8f4106de0793:a892af13@us-cdbr-iron-east-05.cleardb.net/heroku_12321427b6678fd?reconnect=true';
+$url = parse_url(getenv($herokudburl));
+
+$server = $url["host"];
+$username = $url["user"];
+$password = $url["pass"];
+$db = substr($url["path"], 1);
+
+$db = new mysqli($server, $username, $password, $db);
+
 
 //apaga os trendings que estavam salvos, pra pegar os novos
 $sql = 'delete from repositories where 1';
@@ -64,7 +66,7 @@ for($i=0;$i<$num_rows;$i++){
 echo ' Dados salvos no BD! ';
 
 echo '<br><br>';
-echo '<a href="/GITAPI/init.php">Voltar</a>';
+echo '<a href="/git_api/init.php">Voltar</a>';
 
 //echo '<pre>';
 //echo var_dump($decoded["items"][0]["description"]);

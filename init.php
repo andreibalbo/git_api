@@ -5,15 +5,6 @@
  * Date: 8/7/2017
  * Time: 9:23 AM
  */
-$user = 'root';
-$pwd = '';
-$ndb = 'gitapi';
-$db = new mysqli('localhost',$user,$pwd,$ndb) or die("falha ao conectar ao db");
-
-if ($db->connect_error) {
-    die("Connection failed: " . $db->connect_error);
-}
-else{/*echo 'Conectado na base de dados!';*/}
 
 ?>
 <!DOCTYPE html>
@@ -32,12 +23,12 @@ else{/*echo 'Conectado na base de dados!';*/}
 
 <div class="bodyback">
 
-    <a class="get" href="\GITAPI\get_trend.php">
-        <img border="0" title="Load/Reload trendings on DB" alt="Get trends" src="/GITAPI/img/button_get-trendings.png">
+    <a class="get" href="\git_api\get_trend.php">
+        <img border="0" title="Load/Reload trendings on DB" alt="Get trends" src="/git_api/img/button_get-trendings.png">
     </a>
 
-    <a class="list" href="\GITAPI\list_trend.php">
-        <img border="0" title="List of loaded repos" alt="List trends" src="/GITAPI/img/button_list-trendings.png">
+    <a class="list" href="\git_api\list_trend.php">
+        <img border="0" title="List of loaded repos" alt="List trends" src="/git_api/img/button_list-trendings.png">
     </a>
 
 </div>
@@ -99,7 +90,7 @@ else{/*echo 'Conectado na base de dados!';*/}
         background-position-x: -150px;
         background-position-y: -90px;
 
-        background-image: url('/GITAPI/img/cc-wallpaper-desktop.png');
+        background-image: url('/git_api/img/cc-wallpaper-desktop.png');
         background-size: 600px 500px;
         height: 300px;
         width: 600px;

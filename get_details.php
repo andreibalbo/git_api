@@ -5,15 +5,15 @@
  * Date: 9/11/2017
  * Time: 3:46 PM
  */
-$user = 'root';
-$pwd = '';
-$ndb = 'gitapi';
-$db = new mysqli('localhost',$user,$pwd,$ndb) or die("falha ao conectar ao db");
 
-if ($db->connect_error) {
-    die("Connection failed: " . $db->connect_error);
-}
-else{/*echo 'Conectado na base de dados!';*/}
+$herokudburl = 'mysql://be8f4106de0793:a892af13@us-cdbr-iron-east-05.cleardb.net/heroku_12321427b6678fd?reconnect=true';
+$url = parse_url(getenv($herokudburl));
+$server = $url["host"];
+$username = $url["user"];
+$password = $url["pass"];
+$db = substr($url["path"], 1);
+
+$db = new mysqli($server, $username, $password, $db);
 
 if(isset($_GET["id"])){
     $id = $_GET["id"];
@@ -114,13 +114,13 @@ $subscribers = $decoded["subscribers_count"];
         <p class="texto2" style="top: 65px;left: 680px;">Updated at: <?php echo $updated?></p>
         <p class="texto2" style="top: 90px;left: 680px;">Pushed at: <?php echo $pushed?></p>
 
-        <img src="/GITAPI/img/star-128.png" title="Stars count" style="position: absolute;top: 20px;left:300px; height: 50px;width: 50px;">
+        <img src="/git_api/img/star-128.png" title="Stars count" style="position: absolute;top: 20px;left:300px; height: 50px;width: 50px;">
         <p class="texto2" style="top: 50px;left: 310px;"><?php echo $stars?></p>
 
-        <img src="/GITAPI/img/bino.png" title="Watchers count" style="position: absolute;top: 20px;left:380px; height: 50px;width: 50px;">
+        <img src="/git_api/img/bino.png" title="Watchers count" style="position: absolute;top: 20px;left:380px; height: 50px;width: 50px;">
         <p class="texto2" style="top: 50px;left: 390px;"><?php echo $watchers?></p>
 
-        <img src="/GITAPI/img/subs.png" title="Subs count" style="position: absolute;top: 20px;left:460px; height: 50px;width: 50px;">
+        <img src="/git_api/img/subs.png" title="Subs count" style="position: absolute;top: 20px;left:460px; height: 50px;width: 50px;">
         <p class="texto2" style="top: 50px;left: 470px;"><?php echo $subscribers?></p>
 
         <p class="texto2" style="top: 160px;left: 20px;">Description: <?php echo $description?></p>
