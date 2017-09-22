@@ -9,12 +9,12 @@ Testando links agora [link google](https://www.google.com.br "clique para ir pro
   >
 >pulando linha de citação p ver
 
-### Lista não ordenada  
+## Lista não ordenada  
 * Primeiro item
 * Segundo item
 * Terceiro item  
   
-### Lista ordenada
+## Lista ordenada
 1. Primeiro
 2. Segundo
 3. Terceiro
@@ -23,12 +23,12 @@ Testando links agora [link google](https://www.google.com.br "clique para ir pro
 Parecido com link porém com um **!** antes  
 ![banana](http://findicons.com/files/icons/343/fruits/128/banana.png "bananas men")
   
-### Task List
+## Task List
 - [ ] Aprender MarkDown
 - [ ] Ficar bom em MarkDown
 - [x] Falhar miseravelmente
   
-  ## Tabelas
+## Tabelas
   
   Item    | Função
   :------:|:-------:
