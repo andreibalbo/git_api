@@ -1,2 +1,4 @@
 # git_api
-API Test about getting trending repos from github
+
+## Treinamento de MarkDown
+Testando paragrafos e "itens" de *texto*
