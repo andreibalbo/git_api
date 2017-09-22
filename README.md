@@ -21,4 +21,17 @@ Testando links agora [link google](https://www.google.com.br "clique para ir pro
 
 ## Imagens
 Parecido com link porém com um **!** antes  
-![banana](http://cdn.osxdaily.com/wp-content/uploads/2013/07/dancing-banana.gif)
+![banana](http://findicons.com/files/icons/343/fruits/128/banana.png "bananas men")
+  
+### Task List
+- [ ] Aprender MarkDown
+- [ ] Ficar bom em MarkDown
+- [x] Falhar miseravelmente
+  
+  ## Tabelas
+  
+  Item    | Função
+  :------:|:-------:
+  Garrafa | Nenhuma
+  Papel   | Sei la
+  Legume  | Whatever
