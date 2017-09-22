@@ -35,3 +35,11 @@ Parecido com link porém com um **!** antes
   Garrafa | Nenhuma
   Papel   | Sei la
   Legume  | Whatever
+
+## Trechos de código
+
+Em java fazemos o print assim:  
+  
+  System.out.println("Qual fita");
+  
+Legal ne
