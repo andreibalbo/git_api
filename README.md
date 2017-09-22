@@ -39,7 +39,7 @@ Parecido com link porém com um **!** antes
 ## Trechos de código
 
 Em java fazemos o print assim:  
-  
-  System.out.println("Qual fita");
-  
+```java
+System.out.println("Qual fita");
+```  
 Legal ne
