@@ -1,45 +1,21 @@
 # git_api
 
-## Treinamento de MarkDown
-Testando paragrafos e *asterisco* _underline_ **duploasterisco** __duplounderline__  
-Testando links agora [link google](https://www.google.com.br "clique para ir pro google") ou <https://www.google.com.br>  
-  
-  >citações wat  
-  > nao sei oq por
-  >
->pulando linha de citação p ver
+## Geral
+Esta aplicação foi desenvolvida para o Teste no processo seletivo da Ateliware. Em seguida, por motivos de aprendizagem foi requisitado a "Dockerização" da aplicação.  
+É de conhecimento que o app não possui boa usabilidade e nem design. Mas para fins de treinamento foi considerado ok.
 
-## Lista não ordenada  
-* Primeiro item
-* Segundo item
-* Terceiro item  
-  
-## Lista ordenada
-1. Primeiro
-2. Segundo
-3. Terceiro
+## Instruções de uso  
+### Create DB  
+Por se tratar de um app dockerizado, é de se imaginar que será rodado em um container. Sendo assim, ao iniciar a instancia do MySQL, ela se encontrará vazia, sendo necessária a criação de uma database inicial. Ao clicar neste link ele simplesmente cria a tabela para que as outras funções possam ser executadas.
+>ps: também serve de teste para conferir se a conexão com o banco está acontecendo.  
+### Create repos table  
+Após a inicialização da base de dados é necessário que se crie a tabela de repositórios. Este link simplesmente cria esta tabela, permitindo que as próximas funções respondam corretamente. 
+### Get trends  
+Função que busca os repositórios destaque na API do GitHub via HTTP GET e salva na tabela de repositórios.  
+### List trendings
+Lista os repositórios salvos no BD para que o usuário possa visualizar os detalhes de cada um.
+### Detalhes do repositório  
+Busca, através do id, os dados mais detalhados do repositório via HTTP GET na API do GitHub.  
 
-## Imagens
-Parecido com link porém com um **!** antes  
-![banana](http://findicons.com/files/icons/343/fruits/128/banana.png "bananas men")
-  
-## Task List
-- [ ] Aprender MarkDown
-- [ ] Ficar bom em MarkDown
-- [x] Falhar miseravelmente
-  
-## Tabelas
-  
-  Item    | Função
-  :------:|:-------:
-  Garrafa | Nenhuma
-  Papel   | Sei la
-  Legume  | Whatever
-
-## Trechos de código
-
-Em java fazemos o print assim:  
-```java
-System.out.println("Qual fita");
-```  
-Legal ne
+## Informações Úteis
+Aqui, vou mostrar algumas das dificuldades que foram encontradas durante esta tarefa, para ajudar quem precisar.
