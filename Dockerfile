@@ -2,7 +2,11 @@ FROM ubuntu:latest
 
 # Install apache, PHP, and supplimentary programs. openssh-server, curl, and lynx-cur are for debugging the container.
 RUN apt-get update && apt-get -y upgrade && DEBIAN_FRONTEND=noninteractive apt-get -y install \
-    apache2 php7.0 php7.0-mysql libapache2-mod-php7.0 curl lynx-cur
+    apache2 php7.0 php7.0-mysql libapache2-mod-php7.0 lynx-cur curl
+
+RUN apt-get install php-curl -y
+
+
 
 # Enable apache mods.
 RUN a2enmod php7.0

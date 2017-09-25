@@ -1,2 +1,21 @@
-php:
-  build: .
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+     - "8080:80"
+    volumes:
+     - ./www:/var/www/site/
+    links:
+     - mysql
+
+
+mysql:
+  image: mysql
+  ports:
+    - "3306:3306"
+  environment:
+    - MYSQL_ROOT_PASSWORD=MY_PASSWORD
+    - MYSQL_DATABASE=YOUR_DATABASE_NAME
+  volumes: 
+    - ./mysql:/docker-entrypoint-initdb.d

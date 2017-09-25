@@ -21,14 +21,22 @@ $db = new mysqli($server, $username, $password, $dbx);
 if ($db->connect_error) {
     echo 'Server: '.$server.' / user: '.$username.' / pwd: '.$password.' / dbx: '.$dbx;
     die("Connection failed: " . $db->connect_error);
+}else{
+
 }
+
 
 //apaga os trendings que estavam salvos, pra pegar os novos
 $sql = 'delete from repositories where 1';
 mysqli_query($db,$sql);
 
+
 $service_url = 'https://api.github.com/search/repositories?q=created:>2000-01-01&sort=stars&order=desc';
+
+try{
 $curl = curl_init($service_url);
+}catch(Exception $e){"Problema no curl";}
+
 
 $headers = array(
     'Content-Type: application/json',
@@ -52,6 +60,8 @@ if (isset($decoded->response->status) && $decoded->response->status == 'ERROR') 
 echo 'response ok!';
 //echo $decoded->attachments;
 echo '<br>';
+
+
 
 $num_rows = count($decoded["items"]);
 echo '<pre>';

@@ -7,8 +7,7 @@
  */
 
 $herokudburl = 'mysql://be8f4106de0793:a892af13@us-cdbr-iron-east-05.cleardb.net/heroku_12321427b6678fd?reconnect=true';
-
-$url = parse_url(getenv("$herokudburl"));
+$url = parse_url(getenv($herokudburl));
 
 $server = 'us-cdbr-iron-east-05.cleardb.net';
 $username = 'be8f4106de0793';
@@ -16,5 +15,11 @@ $password = 'a892af13';
 $dbx = 'heroku_12321427b6678fd';
 
 $db = new mysqli($server, $username, $password, $dbx);
+
+if ($db->connect_error) {
+    echo 'Server: '.$server.' / user: '.$username.' / pwd: '.$password.' / dbx: '.$dbx;
+    die("Connection failed: " . $db->connect_error);
+}
+else{echo 'Conectado com sucesso';}
 
 ?>

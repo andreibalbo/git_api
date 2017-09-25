@@ -23,6 +23,8 @@
 
 <div class="bodyback">
 
+    <a class="testdb" href="\connect.php">Test DB Connections</a>
+
     <a class="get" href="\get_trend.php">
         <img border="0" title="Load/Reload trendings on DB" alt="Get trends" src="/img/button_get-trendings.png">
     </a>
@@ -35,6 +37,8 @@
 </body>
 
 <style>
+
+
     .headbar{
         align-items: center;
         position: absolute;
@@ -72,7 +76,13 @@
         -webkit-text-stroke-width: 1px;
         -webkit-text-stroke-color: black;
     }
-
+    .testdb{
+	position: absolute;
+	top:50px;
+	left:30px;
+	color:white;
+	
+    }
     .get{
         position: absolute;
         top: 50px;
