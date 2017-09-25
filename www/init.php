@@ -23,7 +23,9 @@
 
 <div class="bodyback">
 
-    <a class="testdb" href="\connect.php">Test DB Connections</a>
+    <a class="testdb" href="\connect.php">Create DB</a>
+
+    <a class="testdb2" href="\connect2.php">Create repos table</a>
 
     <a class="get" href="\get_trend.php">
         <img border="0" title="Load/Reload trendings on DB" alt="Get trends" src="/img/button_get-trendings.png">
@@ -82,6 +84,13 @@
 	left:30px;
 	color:white;
 	
+    }
+    .testdb2{
+    position: absolute;
+    top:80px;
+    left:30px;
+    color:white;
+    
     }
     .get{
         position: absolute;

@@ -5,6 +5,8 @@
  * Date: 9/11/2017
  * Time: 3:46 PM
  */
+
+/*
 $herokudburl = 'mysql://be8f4106de0793:a892af13@us-cdbr-iron-east-05.cleardb.net/heroku_12321427b6678fd?reconnect=true';
 $url = parse_url(getenv($herokudburl));
 
@@ -14,8 +16,12 @@ $password = 'a892af13';
 $dbx = 'heroku_12321427b6678fd';
 
 $db = new mysqli($server, $username, $password, $dbx);
+*/
+$server= 'db';
+$username= 'root';
+$password= 'example';
 
-
+$db = new mysqli($server, $username, $password, 'gitapidb');
 
 $sql = 'select * from repositories order by stars desc';
 $result = mysqli_query($db,$sql);

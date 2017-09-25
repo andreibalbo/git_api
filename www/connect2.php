@@ -18,24 +18,19 @@ $server= 'db';
 $username= 'root';
 $password= 'example';
 
+$conn = new mysqli($server, $username, $password, 'gitapidb');
 
-// Create connection
-$conn = new mysqli($server, $username, $password);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
 
-// Create database
-try{
-$sql = "CREATE DATABASE gitapidb";
-if ($conn->query($sql) === TRUE) {
-    echo "Database created successfully";
+
+$sql = "CREATE TABLE repositories (id int,user varchar(50),name varchar(100),description varchar(500),stars int)";
+
+echo $sql;
+echo '<br>';
+if (mysqli_query($conn, $sql)) {
+    echo "Table repositories created successfully";
 } else {
-    echo "Error creating database: " . $conn->error;
-    die;
+    echo "Error creating table: " . mysqli_error($conn);
 }
-}
-catch(Exception $e){}
+
 
 ?>
