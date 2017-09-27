@@ -2,7 +2,9 @@
 
 ## Geral
 Esta aplicação foi desenvolvida para o Teste no processo seletivo da Ateliware. Em seguida, por motivos de aprendizagem foi requisitado a "Dockerização" da aplicação.  
-É de conhecimento que o app não possui boa usabilidade e nem design. Mas para fins de treinamento foi considerado ok.
+É de conhecimento que o app não possui boa usabilidade e nem design. Mas para fins de treinamento foi considerado ok.  
+  
+-Existe uma versão construida em ruby da mesma aplicação, que pode ser acessada pelo [Link](https://github.com/andreibalbo/git_api_ruby)
 
 ## Instruções de uso  
 ### Create DB  
