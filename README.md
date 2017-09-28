@@ -29,7 +29,8 @@ Alguns comandos no docker que ajudam muito e podem evitar muitas confusões, pri
  * Ao realizar um docker-compose up, é bom utilizar a flag `-d` para que a função "up" termine de carregar os arquivos e devolva o console sem ter que parar o serviço com um `Ctrl+C`. Não é sempre que acontece mas ajuda.
  * Se estiver construindo o projeto com docker-compose build, as vezes a flag `--no-cache` pode salvar. Pois estava tendo dificuldades em que minhas alterações no código não eram atualizadas devido ao docker estar usando o cache na construção.
  
- Tinha algumas dúvidas quanto ao docker-compose e aos volumes, que foram bem melhores esclarecidas ao fazer o tutorial próprio do docker-compose, disponível neste [Link](https://docs.docker.com/compose/gettingstarted/ "Compose Getting Started").  
- Vou adicionando aqui conforme for lembrando mais...
+ * Tinha algumas dúvidas quanto ao docker-compose e aos volumes, que foram bem melhores esclarecidas ao fazer o tutorial próprio do docker-compose, disponível neste [Link](https://docs.docker.com/compose/gettingstarted/ "Compose Getting Started").  
+   
+ * Vou adicionando aqui conforme for lembrando mais...
  
  
