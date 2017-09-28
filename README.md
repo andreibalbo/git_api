@@ -23,11 +23,11 @@ Busca, através do id, os dados mais detalhados do repositório via HTTP GET na 
 Aqui, vou mostrar algumas das dificuldades que foram encontradas durante esta tarefa, para ajudar quem precisar.
   
 Foi utilizado a versão Docker Toolbox para Windows 10 Home no desenvolvimento, que acarretou em algumas dificuldades.
-  - Esta versão no windows tem um probleminha quanto ao sincronismo de arquivos nos volumes. Pastas fora do diretório C:/Users/your_user/... Não fazem o sync direito. Portanto tive que mudar o diretório do meu projeto pras coisas começarem a andar.
+  - Esta versão no windows tem um probleminha quanto ao sincronismo de arquivos nos volumes. Pastas fora do diretório `C:/Users/your_user/...` Não fazem o sync direito. Portanto tive que mudar o diretório do meu projeto pras coisas começarem a andar.
   
 Alguns comandos no docker que ajudam muito e podem evitar muitas confusões, principalmente para quem não está acostumado:
- - Ao realizar um docker-compose up, é bom utilizar a flag -d para que a função "up" termine de carregar os arquivos e devolva o console sem ter que parar o serviço com um Ctrl+C. Não é sempre que acontece mas ajuda.
- - Se estiver construindo o projeto com docker-compose build, as vezes a flag --no-cache pode salvar. Pois estava tendo dificuldades em que minhas alterações no código não eram atualizadas devido ao docker estar usando o cache na construção.
+ * Ao realizar um docker-compose up, é bom utilizar a flag `-d` para que a função "up" termine de carregar os arquivos e devolva o console sem ter que parar o serviço com um `Ctrl+C`. Não é sempre que acontece mas ajuda.
+ * Se estiver construindo o projeto com docker-compose build, as vezes a flag `--no-cache` pode salvar. Pois estava tendo dificuldades em que minhas alterações no código não eram atualizadas devido ao docker estar usando o cache na construção.
  
  Tinha algumas dúvidas quanto ao docker-compose e aos volumes, que foram bem melhores esclarecidas ao fazer o tutorial próprio do docker-compose, disponível neste [Link](https://docs.docker.com/compose/gettingstarted/ "Compose Getting Started").  
  Vou adicionando aqui conforme for lembrando mais...
